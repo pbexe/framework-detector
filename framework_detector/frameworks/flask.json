@@ -1,0 +1,12 @@
+{
+    "id": "flask",
+    "name": "Flask",
+    "description": "Web development, one drop at a time",
+    "detect":
+    {
+        "requirements.txt": [
+            "flask"
+        ]
+    },
+    "dockerfile": "flask.Dockerfile"
+}
