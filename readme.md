@@ -13,10 +13,10 @@ pip install framework-detector
 ## Usage
 
 ```python
-from framework_detector import detector, get_dockerfile
+from framework_detector import detect, get_dockerfile
 from pathlib import Path
 
-framework = detector.detect(Path.cwd())
+framework = detect(Path.cwd())
 
 dockerfile = get_dockerfile(framework["dockerfile"])
 ```
