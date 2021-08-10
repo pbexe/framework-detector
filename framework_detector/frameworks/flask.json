@@ -5,7 +5,8 @@
     "detect":
     {
         "requirements.txt": [
-            "flask"
+            "flask",
+            "Flask"
         ]
     },
     "dockerfile": "flask.Dockerfile"
