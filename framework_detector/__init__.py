@@ -1,1 +1,1 @@
-from framework_detector.main import detector, get_dockerfile
+from framework_detector.main import detect, get_dockerfile
