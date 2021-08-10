@@ -7,7 +7,7 @@ Strongly influenced by https://github.com/netlify/framework-info
 ## Installation
 
 ```sh
-pip install framework-detector --extra-index-url https://__token__:<your_personal_token>@git.cardiff.ac.uk/api/v4/projects/5484/packages/pypi/simple
+pip install framework-detector
 ```
 
 ## Usage

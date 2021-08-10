@@ -1,8 +1,11 @@
 [tool.poetry]
 name = "framework-detector"
-version = "0.1.0"
+version = "0.1.2"
 description = "Detects which framework is in use in a project"
 authors = ["Miles Budden <git@miles.so>"]
+readme = "readme.md"
+homepage = "https://github.com/pbexe/framework-detector"
+repository = "https://github.com/pbexe/framework-detector"
 
 [tool.poetry.dependencies]
 python = "^3.9"
