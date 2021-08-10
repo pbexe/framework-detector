@@ -6,7 +6,7 @@ from typing import Any
 from framework_detector import frameworks
 
 
-def detect(path: Path) -> str:
+def detect(path: Path) -> dict[str, Any]:
     """Detects the framework of a given path.
 
     Args:
@@ -24,7 +24,9 @@ def detect(path: Path) -> str:
         ):
             data = json.loads(importlib.resources.read_text(frameworks, value))
             if check_match(path, data):
-                return data["name"]
+                return data
+
+    # Not the nice way to do this, but it is the easiest way I could think of
     raise KeyError("No known framework found")
 
 
@@ -43,11 +45,26 @@ def check_match(path: Path, data: dict[str, Any]) -> bool:
             if data["detect"][file] is None:
                 return True
             else:
+                # It is needed to check whether the contents of the file match
                 file_text = (path / file).read_text()
                 for substring in data["detect"][file]:
                     if substring in file_text:
                         return True
     return False
+
+
+def get_dockerfile(file_name: str) -> str:
+    """Gets the dockerfile from the given file name.
+
+    Args:
+        file_name (str): The file name to get the dockerfile from.
+
+    Returns:
+        str: The dockerfile.
+    """
+    return importlib.resources.read_text(
+        frameworks, file_name
+    )
 
 
 if __name__ == "__main__":
