@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "framework-detector"
-version = "0.1.2"
+version = "0.1.4"
 description = "Detects which framework is in use in a project"
 authors = ["Miles Budden <git@miles.so>"]
 readme = "readme.md"

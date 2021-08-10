@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from framework_detector import frameworks
+from framework_detector import frameworks, dockerfiles
 
 
 def detect(path: Path) -> dict[str, Any]:
@@ -63,7 +63,7 @@ def get_dockerfile(file_name: str) -> str:
         str: The dockerfile.
     """
     return importlib.resources.read_text(
-        frameworks, file_name
+        dockerfiles, file_name
     )
 
 
