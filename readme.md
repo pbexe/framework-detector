@@ -25,4 +25,4 @@ dockerfile = get_dockerfile(framework["dockerfile"])
 
 - Flask
 - Spring Boot
-- Django (No Dockerfile)
+- Django
