@@ -20,3 +20,9 @@ framework = detect(Path.cwd())
 
 dockerfile = get_dockerfile(framework["dockerfile"])
 ```
+
+## Supported frameworks
+
+- Flask
+- Spring Boot
+- Django (No Dockerfile)
